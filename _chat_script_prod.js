@@ -27,7 +27,7 @@ export class ChatWidget {
   }
 
   static async create(options) {
-    let htmlTemplate = await fetch('__chattemplate.html').then((html) =>
+    let htmlTemplate = await fetch('https://cdn.jsdelivr.net/gh/NourSofanati/chatwidget/__chattemplate.html').then((html) =>
       html.text()
     )
     htmlTemplate = htmlTemplate.replace(
