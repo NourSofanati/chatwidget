@@ -2,7 +2,7 @@ export class ChatWidget {
   static defaultOptions = {
     size: '60',
     backgroundColor: '#61b736',
-    imageUrl: 'btn.svg',
+    imageUrl: 'https://cdn.jsdelivr.net/gh/NourSofanati/chatwidget/btn.svg',
     height: '580',
     width: '300',
   }
