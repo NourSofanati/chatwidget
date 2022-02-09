@@ -2,9 +2,11 @@ export class ChatWidget {
   static defaultOptions = {
     size: '60',
     backgroundColor: '#61b736',
-    imageUrl: 'https://cdn.jsdelivr.net/gh/NourSofanati/chatwidget/btn.svg',
+    imageUrl: 'btn.svg',
     height: '580',
     width: '300',
+    iframeUrl:
+      'https://support1.imsupporting.com/welcome3/index.php?siteid=1234567890',
   }
 
   static resizeChat(options) {
@@ -27,13 +29,14 @@ export class ChatWidget {
   }
 
   static async create(options) {
-    let htmlTemplate = await fetch('https://cdn.jsdelivr.net/gh/NourSofanati/chatwidget/__chattemplate.html').then((html) =>
+    let htmlTemplate = await fetch('__chattemplate.html').then((html) =>
       html.text()
     )
     htmlTemplate = htmlTemplate.replace(
       'chatwidget_btn_img_url',
       options?.imageUrl ?? ChatWidget.defaultOptions.imageUrl
     )
+    htmlTemplate = htmlTemplate.replace('%%iframe_url%%',options?.iframeUrl ?? ChatWidget.defaultOptions.iframeUrl)
     const template = document.createElement('template')
     template.innerHTML = htmlTemplate.trim()
 
