@@ -118,7 +118,7 @@ html {
 
     .chatwidget__block iframe {
         width: 100%;
-        height: 100vh;
+        height: 93vh;
         overflow: auto;
     }
 }

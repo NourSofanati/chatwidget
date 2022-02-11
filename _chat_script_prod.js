@@ -17,7 +17,7 @@ export class ChatWidget {
       let el = document.getElementById('chatwidget__block')
       el.style.height = window.innerHeight + 'px'
       document.getElementById('chatwidget__iframe').style.width = '100%'
-      document.getElementById('chatwidget__iframe').style.height = '100vh'
+      document.getElementById('chatwidget__iframe').style.height = '93vh'
     } else {
       let el = document.getElementById('chatwidget__block')
       el.style.height = 'fit-content'
